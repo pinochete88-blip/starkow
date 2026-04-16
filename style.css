@@ -1,0 +1,319 @@
+:root {
+  --bg: #edf2f8;
+  --card: #ffffff;
+  --nav: #f2f2f3;
+  --primary-dark: #062b7f;
+  --primary: #1046c9;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --success-bg: #e8f6ec;
+  --success-border: #22b455;
+  --success-icon: #66c18a;
+  --info-bg: #eef4ff;
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  height: 190px;
+  background: rgba(242, 242, 243, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #163df2;
+}
+
+.crest {
+  width: 64px;
+  height: 64px;
+  border: 3px solid currentColor;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brand-name {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.page {
+  max-width: 900px;
+  margin: 58px auto 0;
+  padding: 0 24px 70px;
+}
+
+.hero {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 34px 40px 30px;
+  text-align: center;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  transform-origin: center center;
+}
+
+.hero:hover {
+  transform: scale(1.035);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.18);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 400;
+  opacity: 0.96;
+}
+
+.status-card,
+.details-card,
+.notice,
+.footer {
+  box-shadow: var(--shadow);
+}
+
+.status-card {
+  margin-top: 34px;
+  background: #eaf5ee;
+  border-left: 4px solid #1fb14e;
+  border-radius: 18px;
+  padding: 26px 34px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.status-card:hover {
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+}
+
+.status-icon {
+  width: 54px;
+  height: 54px;
+  border: 4px solid #5fbe84;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #33b05c;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.status-title {
+  margin: 0 0 6px;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #0f172a;
+}
+
+.status-text {
+  margin: 0;
+  color: #3b4758;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.details-card {
+  margin-top: 34px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 34px 34px 24px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.shield {
+  width: 26px;
+  height: 30px;
+  display: inline-block;
+  flex: 0 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 28' fill='none'%3E%3Cpath d='M7.2 3.2C8.6 3.2 9.6 2.4 10.4 1.9C11.5 1.2 12.5 1.2 13.6 1.9C14.4 2.4 15.4 3.2 16.8 3.2H18C19.933 3.2 21.5 4.767 21.5 6.7V13.9C21.5 14.95 21.05 15.95 20.27 16.64L14.31 21.95C13.01 23.1 10.99 23.1 9.69 21.95L3.73 16.64C2.95 15.95 2.5 14.95 2.5 13.9V6.7C2.5 4.767 4.067 3.2 6 3.2H7.2Z' stroke='%231046c9' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.detail-row {
+  border-top: 1px solid #e5e7eb;
+  padding: 34px 12px 30px;
+  text-align: center;
+  border-radius: 12px;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detail-row:first-of-type {
+  border-top: 0;
+  padding-top: 18px;
+}
+
+.detail-row:hover {
+  background-color: #f5f7fb;
+  box-shadow: inset 0 0 0 1px #eceff4;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.value.accent {
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.notice {
+  margin-top: 42px;
+  background: var(--info-bg);
+  border-left: 4px solid var(--primary);
+  border-radius: 16px;
+  padding: 28px 30px;
+  text-align: center;
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.notice strong {
+  color: var(--primary-dark);
+}
+
+.footer {
+  margin-top: 70px;
+  background: linear-gradient(90deg, #04153f, #082862);
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 32px 24px 40px;
+}
+
+.footer .small {
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+@media (max-width: 720px) {
+  .topbar {
+    height: 130px;
+  }
+
+  .crest {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .brand-name {
+    font-size: 40px;
+  }
+
+  .page {
+    margin-top: 28px;
+    padding-inline: 16px;
+  }
+
+  .hero,
+  .details-card,
+  .status-card {
+    border-radius: 16px;
+  }
+
+  .hero {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+  color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 42px 40px 36px;
+  text-align: center;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  transform-origin: center center;
+}
+
+  .status-card {
+    padding: 24px 20px;
+    align-items: flex-start;
+  }
+
+  .status-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 28px;
+  }
+
+  .details-card {
+    padding: 24px 18px 14px;
+  }
+
+  .value {
+    font-size: 18px;
+  }
+}
+.logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
